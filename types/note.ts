@@ -14,3 +14,9 @@ export interface NewNote {
   content: string;
   tag: NoteTag;
 }
+
+export interface User {
+  email: string;
+  password: string;
+  avatar?: string;
+}

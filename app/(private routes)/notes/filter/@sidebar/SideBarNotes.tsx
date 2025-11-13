@@ -1,4 +1,4 @@
-import css from "../../../../components/SidebarNotes/SidebarNotes.module.css";
+import css from "./@sidebar/SideBarNotes.module.css";
 import Link from "next/link";
 
 const SidebarNotes = async () => {
