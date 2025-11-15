@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header/Header";
 import TanStackProvider from "@/components/TanStackProvider/TanStackProvider";
 import Footer from "@/components/Footer/Footer";
+import AuthProvider from "@/components/AuthProvider/AuthProvider";
 
 const robotoFont = Roboto({
   weight: ["400", "600", "700"],
@@ -55,11 +56,13 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${robotoFont.variable}`}
       >
         <TanStackProvider>
-          <Header />
-          {children}
-          {modal}
-          <Footer />
-          <div id="modal-root" />
+          <AuthProvider>
+            <Header />
+            {children}
+            {modal}
+            <Footer />
+            <div id="modal-root" />
+          </AuthProvider>
         </TanStackProvider>
       </body>
     </html>

@@ -4,30 +4,9 @@ import type { NewNote } from "../../types/note";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 // import * as Yup from "yup";
 import { ChangeEvent, useId } from "react";
-import { createNote } from "@/lib/api";
+import { createNote } from "../../lib/api/clientApi";
 import { useRouter } from "next/navigation";
 import { useNoteDraft } from "@/lib/store/noteStore";
-// import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
-
-// interface NoteFormProps {
-//   onClose: () => void;
-// }
-// const formValues: NewNote = {
-//   title: "",
-//   content: "",
-//   tag: "Todo",
-// };
-
-// const NotesSchema = Yup.object().shape({
-//   title: Yup.string()
-//     .min(3, "Too short!")
-//     .max(50, "Too long!")
-//     .required("Required field"),
-//   content: Yup.string().max(500, "Too long!"),
-//   tag: Yup.string()
-//     .oneOf(["Work", "Personal", "Meeting", "Shopping", "Todo"])
-//     .required("Required field"),
-// });
 
 export default function NoteForm() {
   const queryClient = useQueryClient();
